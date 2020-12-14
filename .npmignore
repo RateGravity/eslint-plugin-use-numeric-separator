@@ -3,6 +3,7 @@
 .nvmrc
 .eslintrc
 .prettierrc
+.travis.yml
 rollup.config.js
 tsconfig.build.json
 tsconfig.json
