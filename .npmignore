@@ -1,0 +1,13 @@
+# build files
+.babelrc
+.nvmrc
+.eslintrc
+.prettierrc
+.travis.yml
+rollup.config.js
+tsconfig.build.json
+tsconfig.json
+yarn.lock
+
+# non-compiled src
+src/
