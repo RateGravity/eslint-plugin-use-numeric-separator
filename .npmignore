@@ -1,2 +1,10 @@
 # build files
+.babelrc
 .nvmrc
+rollup.config.js
+tsconfig.build.json
+tsconfig.json
+yarn.lock
+
+# non-compiled src
+src/
