@@ -1,0 +1,25 @@
+{
+  "name": "eslint-plugin-use-numeric-separator",
+  "version": "1.0.0",
+  "description": "An ESLint plugin to enforce usage of the numeric separator for long numeric literals",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/RateGravity/eslint-plugin-use-numeric-separator.git",
+  "author": "Own Up <dev+eslint@ownup.com>",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "dependencies": {},
+  "peerDependencies": {
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "numeric-separator",
+    "large-numbers"
+  ]
+}
