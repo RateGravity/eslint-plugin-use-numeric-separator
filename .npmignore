@@ -1,6 +1,8 @@
 # build files
 .babelrc
 .nvmrc
+.eslintrc
+.prettierrc
 rollup.config.js
 tsconfig.build.json
 tsconfig.json
