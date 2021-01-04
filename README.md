@@ -30,31 +30,38 @@ With default options:
 ```
 
 ## Options
-Each base has its own `threshold` and `groupSize` options with defaults. `threshold` is the number of digits above which the rule should apply, and `groupSize` is the number of digits between each separator. Here is an example `.eslintrc.json` showing every option with the default values:
+Each base has its own rule with `threshold` and `groupSize` options, with defaults. `threshold` is the number of digits above which the rule should apply, and `groupSize` is the number of digits between each separator. Here is an example `.eslintrc.json` with every rule on and set to the default values:
 
 ```json
 {
   ...
   "rules": {
-    "use-numeric-separator": [
+    "use-numeric-separator/decimal": [
       "error",
       {
-        "decimal": {
-          "threshold": 5,
-          "groupSize": 3
-        },
-        "hex": {
-          "threhold": 7,
-          "groupSize": 2
-        },
-        "binary": {
-          "threshold": 5,
-          "groupSize": 4
-        },
-        "octal": {
-          "threshold": 5,
-          "groupSize": 3
-        }
+        "threshold": 5,
+        "groupSize": 3
+      }
+    ],
+    "use-numeric-separator/hexadecimal": [
+      "error",
+      {
+        "threshold": 7,
+        "groupSize": 2
+      }
+    ],
+    "use-numeric-separator/binary": [
+      "error",
+      {
+        "threshold": 5,
+        "groupSize": 4
+      }
+    ],
+    "use-numeric-separator/octal": [
+      "error",
+      {
+        "threshold": 5,
+        "groupSize": 3
       }
     ]
   }
