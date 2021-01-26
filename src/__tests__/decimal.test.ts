@@ -1,9 +1,9 @@
 import { RuleTester } from 'eslint';
-import { useNumericSeparator } from '../use-numeric-separator';
+import { decimal } from '../decimal';
 
 const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2021 } });
 
-ruleTester.run('use-numeric-separator', useNumericSeparator, {
+ruleTester.run('decimal', decimal, {
   valid: [
     // integers:
     'const n = 1;',
@@ -34,27 +34,22 @@ ruleTester.run('use-numeric-separator', useNumericSeparator, {
     // with options:
     {
       code: 'const n = 123456;',
-      options: [{ decimal: { threshold: 7 } }]
+      options: [{ threshold: 7 }]
     },
     {
       code: 'const n = 1_234;',
-      options: [{ decimal: { threshold: 4 } }]
+      options: [{ threshold: 4 }]
     },
     {
       code: 'const n = 1_23_45_67_89',
-      options: [{ decimal: { groupSize: 2 } }]
+      options: [{ groupSize: 2 }]
     },
-    // binary:
-    'const n = 0b1010',
-    'const n = 0b10_1010',
-    // hex:
-    'const n = 0x123abc',
-    'const n = 0x12_3a_bc_de',
-    // octal:
-    'const n = 0o1234;',
-    'const n = 0o1_234_567;',
     // scientific notation is ignored:
-    'const n = 5e+123'
+    'const n = 5e+123',
+    // ignores other bases:
+    'const n = 0x123456789',
+    'const n = 0b010101010101',
+    'const n = 0o1234567012345'
   ],
   invalid: [
     // integers:
@@ -105,24 +100,6 @@ ruleTester.run('use-numeric-separator', useNumericSeparator, {
       code: 'const n = -12345.12345;',
       errors: [{ messageId: 'invalid' }],
       output: 'const n = -12_345.12345;'
-    },
-    // binary:
-    {
-      code: 'const n = 0b101010101010',
-      errors: [{ messageId: 'invalid' }],
-      output: 'const n = 0b1010_1010_1010'
-    },
-    // hex:
-    {
-      code: 'const n = 0x123456789abc',
-      errors: [{ messageId: 'invalid' }],
-      output: 'const n = 0x12_34_56_78_9a_bc'
-    },
-    // octal:
-    {
-      code: 'const n = 0o1234567',
-      errors: [{ messageId: 'invalid' }],
-      output: 'const n = 0o1_234_567'
     }
   ]
 });

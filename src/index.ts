@@ -1,5 +1,12 @@
-import { useNumericSeparator } from './use-numeric-separator';
+import { binary } from './binary';
+import { decimal } from './decimal';
+import { hexadecimal } from './hexadecimal';
+import { octal } from './octal';
+
 
 export const rules = {
-  'use-numeric-separator': useNumericSeparator
+  binary,
+  decimal,
+  hexadecimal,
+  octal
 };

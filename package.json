@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-use-numeric-separator",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An ESLint plugin to enforce usage of the numeric separator for long numeric literals",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
