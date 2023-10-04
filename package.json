@@ -13,6 +13,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup --config rollup.config.js && tsc --build tsconfig.build.json",
+    "deploy": "node ./scripts/deploy.js",
     "type-check": "tsc --noEmit",
     "format": "prettier --write 'src/**/*.ts'",
     "lint": "eslint src --ext ts",
