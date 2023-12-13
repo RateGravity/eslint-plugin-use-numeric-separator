@@ -20,25 +20,25 @@
     "test": "ts-mocha src/**/__tests__/*.test.ts"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.10",
-    "@babel/preset-typescript": "^7.12.7",
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-typescript": "^7.23.3",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@types/eslint": "^7.2.6",
-    "@types/node": "^16",
-    "@typescript-eslint/eslint-plugin": "^4.9.1",
-    "@typescript-eslint/parser": "^4.9.1",
-    "eslint": "^7.15.0",
+    "@types/node": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
     "mocha": "^8.2.1",
-    "prettier": "^2.2.1",
+    "prettier": "^3.1.1",
     "rollup": "^2.34.2",
     "rollup-plugin-babel": "^4.4.0",
-    "ts-mocha": "^8.0.0",
-    "typescript": "^4.1.2"
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.3.3"
   },
   "dependencies": {},
   "peerDependencies": {
-    "eslint": "^7"
+    "eslint": "^7 || ^8"
   },
   "keywords": [
     "eslint",
