@@ -1,5 +1,5 @@
-import { Rule } from "eslint";
-import { nondecimal } from "./nondecimal";
+import { Rule } from 'eslint';
+import { nondecimal } from './nondecimal';
 
 export const hexadecimal: Rule.RuleModule = nondecimal({
   name: 'hexadecimal',

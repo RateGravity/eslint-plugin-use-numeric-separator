@@ -1,5 +1,5 @@
-import { Rule } from "eslint";
-import { nondecimal } from "./nondecimal";
+import { Rule } from 'eslint';
+import { nondecimal } from './nondecimal';
 
 export const binary: Rule.RuleModule = nondecimal({
   name: 'binary',

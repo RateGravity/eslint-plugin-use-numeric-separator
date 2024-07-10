@@ -1,5 +1,5 @@
-import { Rule } from "eslint";
-import { nondecimal } from "./nondecimal";
+import { Rule } from 'eslint';
+import { nondecimal } from './nondecimal';
 
 export const octal: Rule.RuleModule = nondecimal({
   name: 'octal',

@@ -1,4 +1,4 @@
-import { Rule } from "eslint";
+import { Rule } from 'eslint';
 import { schema } from './common';
 
 type Props = {
@@ -6,9 +6,14 @@ type Props = {
   prefix: string;
   defaultThreshold: number;
   defaultGroupSize: number;
-}
+};
 
-export const nondecimal = ({ name, prefix, defaultThreshold, defaultGroupSize }: Props): Rule.RuleModule => ({
+export const nondecimal = ({
+  name,
+  prefix,
+  defaultThreshold,
+  defaultGroupSize
+}: Props): Rule.RuleModule => ({
   meta: {
     type: 'suggestion',
     docs: {
@@ -33,7 +38,7 @@ export const nondecimal = ({ name, prefix, defaultThreshold, defaultGroupSize }:
       }
 
       const { options } = context;
-      const option = options && options[0]
+      const option = options && options[0];
       const threshold: number = option?.threshold || defaultThreshold;
       const groupSize: number = option?.groupSize || defaultGroupSize;
 
@@ -42,7 +47,7 @@ export const nondecimal = ({ name, prefix, defaultThreshold, defaultGroupSize }:
       if (stripped.length >= threshold) {
         const pattern = new RegExp(`(?=(?:.{${groupSize}})*$)`);
         const correct = prefix + stripped.split(pattern).join('_');
-        
+
         if (raw !== correct) {
           context.report({
             node,
@@ -55,4 +60,4 @@ export const nondecimal = ({ name, prefix, defaultThreshold, defaultGroupSize }:
       }
     }
   })
-})
+});

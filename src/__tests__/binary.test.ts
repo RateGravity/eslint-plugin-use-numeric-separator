@@ -9,8 +9,8 @@ ruleTester.run('binary', binary, {
     'const n = 0b10_1010',
     // with options:
     {
-      'code': 'const n = 0b1_010_101_010',
-      'options': [{ threshold: 2, groupSize: 3 }]
+      code: 'const n = 0b1_010_101_010',
+      options: [{ threshold: 2, groupSize: 3 }]
     },
     // ignores other bases:
     'const n = 123456',

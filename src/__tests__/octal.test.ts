@@ -9,8 +9,8 @@ ruleTester.run('octal', octal, {
     'const n = 0o1_234_567;',
     // with options:
     {
-      'code': 'const n = 0o1234_5670',
-      'options': [{ threshold: 7, groupSize: 4 }]
+      code: 'const n = 0o1234_5670',
+      options: [{ threshold: 7, groupSize: 4 }]
     },
     // ignores other bases:
     'const n = 123456',

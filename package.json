@@ -17,7 +17,8 @@
     "type-check": "tsc --noEmit",
     "format": "prettier --write 'src/**/*.ts'",
     "lint": "eslint src --ext ts",
-    "test": "ts-mocha src/**/__tests__/*.test.ts"
+    "test": "ts-mocha src/**/__tests__/*.test.ts",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",
@@ -29,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "eslint": "^8.55.0",
+    "husky": "^9.0.11",
     "mocha": "^8.2.1",
     "prettier": "^3.1.1",
     "rollup": "^2.34.2",
@@ -36,7 +38,6 @@
     "ts-mocha": "^10.0.0",
     "typescript": "^5.3.3"
   },
-  "dependencies": {},
   "peerDependencies": {
     "eslint": "^7 || ^8"
   },
@@ -45,5 +46,6 @@
     "eslint-plugin",
     "numeric-separator",
     "large-numbers"
-  ]
+  ],
+  "packageManager": "yarn@4.3.1"
 }

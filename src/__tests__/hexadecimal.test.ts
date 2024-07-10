@@ -9,8 +9,8 @@ ruleTester.run('hexadecimal', hexadecimal, {
     'const n = 0x12_3a_bc_de',
     // with options:
     {
-      'code': 'const n = 0x12_345_678_9ab',
-      'options': [{ threshold: 9, groupSize: 3 }]
+      code: 'const n = 0x12_345_678_9ab',
+      options: [{ threshold: 9, groupSize: 3 }]
     },
     // ignores other bases:
     'const n = 123456',

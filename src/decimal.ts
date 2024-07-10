@@ -1,4 +1,4 @@
-import { Rule } from "eslint";
+import { Rule } from 'eslint';
 import { schema } from './common';
 
 export const decimal: Rule.RuleModule = {
@@ -30,18 +30,17 @@ export const decimal: Rule.RuleModule = {
       }
 
       const { options } = context;
-      const option = options && options[0]
+      const option = options && options[0];
       const threshold: number = option?.threshold || 5;
       const groupSize: number = option?.groupSize || 3;
 
       const [rawIntPart, fracPart] = raw.split('.');
-      const intPart = rawIntPart.replace(/_/g, '')
+      const intPart = rawIntPart.replace(/_/g, '');
 
       if (intPart.length >= threshold) {
         const pattern = new RegExp(`(?=(?:.{${groupSize}})*$)`);
         const correct =
-          intPart.split(pattern).join('_') +
-          (fracPart ? '.' + fracPart : '');
+          intPart.split(pattern).join('_') + (fracPart ? '.' + fracPart : '');
 
         if (raw !== correct) {
           context.report({
@@ -55,4 +54,4 @@ export const decimal: Rule.RuleModule = {
       }
     }
   })
-}
+};
